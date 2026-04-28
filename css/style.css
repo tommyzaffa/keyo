@@ -175,9 +175,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   mix-blend-mode: difference;
 }
 /* Both side rails face inward: reader tilts head toward the centre to read */
-.side-left { left: 22px; top: 22%; transform: translateY(-50%) rotate(180deg); }
+.side-left { left: 22px; top: 25%; transform: translateY(-50%) rotate(180deg); }
 .side-right { right: 22px; top: 50%; transform: translateY(-50%); }
-.side-bottom-left { left: 22px; top: 72%; transform: translateY(-50%) rotate(180deg); transform-origin: center; }
+.side-bottom-left { left: 22px; top: 75%; transform: translateY(-50%) rotate(180deg); transform-origin: center; }
 .side-text span { display: inline-block; }
 
 /* Rotating phrase stack (vertical sides) */
@@ -210,7 +210,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 @media (max-width: 768px) {
   .side-text { font-size: 9px; letter-spacing: .3em; }
-  .side-left { left: 2px; top: 22%; }
+  .side-left { left: 2px; top: 25%; }
   .side-right { right: 2px; }
   .side-bottom-left { display: none; }
 }
