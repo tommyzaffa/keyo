@@ -245,7 +245,7 @@
     const distance = endTop - startTop;
 
     if (prefersReducedMotion || Math.abs(distance) < 1) {
-      window.scrollTo(0, endTop);
+      window.scrollTo({ top: endTop, left: 0, behavior: "auto" });
       return;
     }
 
@@ -254,7 +254,7 @@
 
     const tick = (now) => {
       const progress = Math.min(1, (now - startTime) / duration);
-      window.scrollTo(0, startTop + distance * easeInOutCubic(progress));
+      window.scrollTo({ top: startTop + distance * easeInOutCubic(progress), left: 0, behavior: "auto" });
       if (progress < 1) anchorScrollFrame = requestAnimationFrame(tick);
       else anchorScrollFrame = null;
     };
@@ -318,11 +318,17 @@
   /* -------- Hero parallax (subtle) -------- */
   const hero = document.querySelector(".hero-slider");
   if (hero && window.matchMedia("(min-width: 769px)").matches) {
-    window.addEventListener("scroll", () => {
+    let heroParallaxFrame = null;
+    const updateHeroParallax = () => {
+      heroParallaxFrame = null;
       const y = window.scrollY;
       if (y < window.innerHeight) {
-        hero.style.transform = `translateY(${y * 0.25}px)`;
+        hero.style.transform = `translate3d(0, ${y * 0.25}px, 0)`;
       }
+    };
+
+    window.addEventListener("scroll", () => {
+      if (!heroParallaxFrame) heroParallaxFrame = requestAnimationFrame(updateHeroParallax);
     }, { passive: true });
   }
 })();

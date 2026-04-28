@@ -24,7 +24,6 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
-  scroll-behavior: smooth;
   scrollbar-width: none;          /* Firefox */
   -ms-overflow-style: none;       /* IE/Edge legacy */
 }
@@ -581,7 +580,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   position: absolute; inset: 0;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   filter: grayscale(60%) brightness(.5);
 }
 .quote-overlay {
