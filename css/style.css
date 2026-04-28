@@ -169,15 +169,15 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   letter-spacing: .15em;
   color: var(--text-dim);
   text-transform: lowercase;
-  writing-mode: vertical-rl;
-  text-orientation: upright;          /* letters stay upright, stacked */
-  text-align: center;                  /* center each letter in its slot */
+  writing-mode: vertical-rl;          /* letters lay on their side */
+  text-align: center;
   pointer-events: none;
   mix-blend-mode: difference;
 }
-.side-left { left: 22px; top: 50%; transform: translateY(-50%); }
+/* Both side rails face inward: reader tilts head toward the centre to read */
+.side-left { left: 22px; top: 50%; transform: translateY(-50%) rotate(180deg); }
 .side-right { right: 22px; top: 50%; transform: translateY(-50%); }
-.side-bottom-left { left: 22px; bottom: 28px; }
+.side-bottom-left { left: 22px; bottom: 28px; transform: rotate(180deg); transform-origin: left bottom; }
 .side-text span { display: inline-block; }
 
 /* Rotating phrase stack (vertical sides) */
@@ -210,8 +210,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 @media (max-width: 768px) {
   .side-text { font-size: 9px; letter-spacing: .3em; }
-  .side-left { left: 10px; }
-  .side-right { right: 10px; }
+  .side-left { left: 2px; }
+  .side-right { right: 2px; }
   .side-bottom-left { display: none; }
 }
 
@@ -221,16 +221,27 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   padding: 22px var(--pad);
-  transition: background .4s var(--ease), border-color .4s var(--ease), padding .3s var(--ease);
-  border-bottom: 1px solid transparent;
+  transition: padding .3s var(--ease);
 }
-.nav.scrolled {
+/* Backdrop on a pseudo-element so backdrop-filter does NOT promote
+   the nav into the containing block of its position:fixed children
+   (the mobile menu). Without this, .nav-links would be clipped to the
+   nav once .scrolled was applied — breaking the menu off the hero. */
+.nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: rgba(10, 10, 10, .82);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom-color: var(--line);
-  padding: 14px var(--pad);
+  border-bottom: 1px solid var(--line);
+  opacity: 0;
+  transition: opacity .4s var(--ease);
+  pointer-events: none;
+  z-index: -1;
 }
+.nav.scrolled::before { opacity: 1; }
+.nav.scrolled { padding: 14px var(--pad); }
 .nav-logo {
   display: flex; flex-direction: column; line-height: 1;
 }
@@ -943,6 +954,49 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 @media (max-width: 860px) {
   .contact-grid { grid-template-columns: 1fr; }
+}
+
+/* Map */
+.contact-map {
+  margin-top: clamp(40px, 6vw, 72px);
+  border: 1px solid var(--line);
+  background: var(--bg-2);
+}
+.contact-map-meta {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--line);
+}
+.contact-map-meta .info-label { margin-bottom: 0; }
+.contact-map-link {
+  font-size: 12px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 2px;
+  transition: color .3s var(--ease), border-color .3s var(--ease);
+}
+.contact-map-link:hover { color: var(--text); border-bottom-color: var(--text); opacity: 1; }
+.contact-map-frame {
+  position: relative;
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+  background: var(--bg-3);
+}
+.contact-map-frame iframe {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  border: 0;
+  /* Approximate dark-mode look on top of Google Maps' default light tiles */
+  filter: invert(92%) hue-rotate(180deg) saturate(.6) contrast(.95);
+  transition: filter .4s var(--ease);
+}
+.contact-map:hover .contact-map-frame iframe { filter: invert(92%) hue-rotate(180deg) saturate(.85) contrast(1); }
+
+@media (max-width: 600px) {
+  .contact-map-frame { aspect-ratio: 4 / 3; }
 }
 
 /* ========== Footer ========== */

@@ -39,6 +39,8 @@ window.KEYO_I18N = {
     "studio.p2": "Fondato nel cuore di Locarno da Omar — in arte Keyo — lo studio nasce con l'obiettivo di offrire un'esperienza di tatuaggio unica e personalizzata. Ogni opera racconta una storia, celebra un momento, riflette un'individualità.",
     "studio.h3": "La nostra filosofia",
     "studio.p3": "Crediamo che ogni tatuaggio debba essere un'opera d'arte su misura. Ogni linea, ogni ombra, ogni dettaglio sono curati con attenzione e passione. Collaboriamo strettamente con i nostri clienti per trasformare la loro visione in realtà.",
+    "studio.h4": "Esperienza e cura",
+    "studio.p4": "Igiene impeccabile, materiali certificati e attenzione costante al benessere di chi entra in studio. Ogni seduta è un momento dedicato a te, in un ambiente accogliente e professionale, dove il tempo si modella sulle tue esigenze.",
 
     "philo.title": "Filosofia",
     "philo.p1": "La pelle, come una tela bianca, accoglie l'opera d'arte che è il tatuaggio. Ogni tratto, ogni sfumatura, racconta una storia unica.",
@@ -90,6 +92,8 @@ window.KEYO_I18N = {
 
     "contact.title": "Contatti",
     "contact.lead": "Hai un'idea? Iniziamo a parlarne.",
+    "contact.findUs": "Dove siamo",
+    "contact.openMap": "Apri in Google Maps ↗",
     "contact.address": "Indirizzo",
     "contact.phone": "Telefono",
     "contact.hours": "Orari",
@@ -147,6 +151,8 @@ window.KEYO_I18N = {
     "studio.p2": "Founded in the heart of Locarno by Omar — known as Keyo — the studio was created to offer a unique and personalised tattoo experience. Every piece tells a story, celebrates a moment, reflects an individuality.",
     "studio.h3": "Our philosophy",
     "studio.p3": "We believe every tattoo should be a bespoke work of art. Every line, every shadow, every detail is treated with attention and passion. We work closely with our clients to turn their vision into reality.",
+    "studio.h4": "Experience and care",
+    "studio.p4": "Impeccable hygiene, certified materials and constant attention to the wellbeing of everyone who walks in. Each session is a moment dedicated to you, in a welcoming and professional environment where time is shaped around your needs.",
 
     "philo.title": "Philosophy",
     "philo.p1": "The skin, like a blank canvas, welcomes the work of art that is the tattoo. Every stroke, every shade tells a unique story.",
@@ -198,6 +204,8 @@ window.KEYO_I18N = {
 
     "contact.title": "Contact",
     "contact.lead": "Got an idea? Let's talk.",
+    "contact.findUs": "Find us",
+    "contact.openMap": "Open in Google Maps ↗",
     "contact.address": "Address",
     "contact.phone": "Phone",
     "contact.hours": "Hours",
@@ -255,6 +263,8 @@ window.KEYO_I18N = {
     "studio.p2": "Gegründet im Herzen von Locarno von Omar — alias Keyo — bietet das Studio ein einzigartiges, individuelles Tattoo-Erlebnis. Jedes Werk erzählt eine Geschichte, würdigt einen Moment, spiegelt eine Persönlichkeit wider.",
     "studio.h3": "Unsere Philosophie",
     "studio.p3": "Wir glauben, jedes Tattoo sollte ein massgeschneidertes Kunstwerk sein. Jede Linie, jeder Schatten, jedes Detail wird mit Sorgfalt und Leidenschaft umgesetzt. Wir arbeiten eng mit unseren Kunden, um ihre Vision Wirklichkeit werden zu lassen.",
+    "studio.h4": "Erfahrung und Sorgfalt",
+    "studio.p4": "Tadellose Hygiene, zertifizierte Materialien und konstante Aufmerksamkeit für das Wohlbefinden aller, die das Studio betreten. Jede Sitzung ist ein Moment, der dir gewidmet ist — in einer einladenden, professionellen Atmosphäre, in der die Zeit sich nach deinen Bedürfnissen richtet.",
 
     "philo.title": "Philosophie",
     "philo.p1": "Die Haut, wie eine leere Leinwand, empfängt das Kunstwerk Tattoo. Jede Linie, jede Nuance erzählt eine einzigartige Geschichte.",
@@ -306,6 +316,8 @@ window.KEYO_I18N = {
 
     "contact.title": "Kontakt",
     "contact.lead": "Hast du eine Idee? Lass uns darüber sprechen.",
+    "contact.findUs": "So findest du uns",
+    "contact.openMap": "In Google Maps öffnen ↗",
     "contact.address": "Adresse",
     "contact.phone": "Telefon",
     "contact.hours": "Öffnungszeiten",
@@ -363,6 +375,8 @@ window.KEYO_I18N = {
     "studio.p2": "Fondé au cœur de Locarno par Omar — alias Keyo — le studio est né pour offrir une expérience de tatouage unique et personnalisée. Chaque pièce raconte une histoire, célèbre un moment, reflète une individualité.",
     "studio.h3": "Notre philosophie",
     "studio.p3": "Chaque tatouage doit être une œuvre d'art sur mesure. Chaque ligne, chaque ombre, chaque détail est traité avec attention et passion. Nous travaillons étroitement avec nos clients pour transformer leur vision en réalité.",
+    "studio.h4": "Expérience et soin",
+    "studio.p4": "Hygiène irréprochable, matériaux certifiés et attention constante au bien-être de chacun. Chaque séance est un moment qui t'est dédié, dans un environnement accueillant et professionnel, où le temps s'adapte à tes besoins.",
 
     "philo.title": "Philosophie",
     "philo.p1": "La peau, comme une toile blanche, accueille l'œuvre d'art qu'est le tatouage. Chaque trait, chaque nuance raconte une histoire unique.",
@@ -414,6 +428,8 @@ window.KEYO_I18N = {
 
     "contact.title": "Contact",
     "contact.lead": "Une idée ? Parlons-en.",
+    "contact.findUs": "Où nous trouver",
+    "contact.openMap": "Ouvrir dans Google Maps ↗",
     "contact.address": "Adresse",
     "contact.phone": "Téléphone",
     "contact.hours": "Horaires",

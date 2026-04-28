@@ -226,7 +226,7 @@
   // screen; smaller value = section appears HIGHER (closer to the top nav).
   const ANCHOR_OFFSETS = {
     "#filosofia": 0,    // centered full-bleed: scroll to its true top
-    "#studio":   60,    // land deeper into the studio section (title near nav)
+    "#studio":   100,   // land slightly above the title so it sits comfortably below the nav
     "#artisti":  0,
     "#galleria": 0,
     "#faq":      0,
