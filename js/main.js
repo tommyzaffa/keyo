@@ -226,11 +226,40 @@
   // screen; smaller value = section appears HIGHER (closer to the top nav).
   const ANCHOR_OFFSETS = {
     "#filosofia": 0,    // centered full-bleed: scroll to its true top
-    "#studio":   130,   // land slightly above the title so it sits comfortably below the nav
+    "#studio":   0,   // land slightly above the title so it sits comfortably below the nav
     "#artisti":  0,
     "#galleria": 0,
     "#faq":      0,
     "#contatti": 0
+  };
+
+  let anchorScrollFrame = null;
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const easeInOutCubic = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+  const scrollToAnchor = (targetTop) => {
+    if (anchorScrollFrame) cancelAnimationFrame(anchorScrollFrame);
+
+    const startTop = window.pageYOffset;
+    const maxTop = document.documentElement.scrollHeight - window.innerHeight;
+    const endTop = Math.max(0, Math.min(targetTop, maxTop));
+    const distance = endTop - startTop;
+
+    if (prefersReducedMotion || Math.abs(distance) < 1) {
+      window.scrollTo(0, endTop);
+      return;
+    }
+
+    const duration = Math.min(1300, Math.max(850, Math.abs(distance) * 0.55));
+    const startTime = performance.now();
+
+    const tick = (now) => {
+      const progress = Math.min(1, (now - startTime) / duration);
+      window.scrollTo(0, startTop + distance * easeInOutCubic(progress));
+      if (progress < 1) anchorScrollFrame = requestAnimationFrame(tick);
+      else anchorScrollFrame = null;
+    };
+
+    anchorScrollFrame = requestAnimationFrame(tick);
   };
 
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
@@ -244,7 +273,7 @@
       const custom = ANCHOR_OFFSETS[href];
       const offset = custom != null ? custom : (navH + 12);
       const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top, behavior: "smooth" });
+      scrollToAnchor(top);
     });
   });
 
