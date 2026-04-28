@@ -211,7 +211,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .side-text { font-size: 9px; letter-spacing: .3em; }
   .side-left { left: 2px; top: 25%; }
   .side-right { right: 2px; }
-  .side-bottom-left { display: none; }
+  .side-bottom-left { left: 2px; top: 75%; }
 }
 
 /* ========== Nav ========== */
