@@ -14,10 +14,16 @@
     document.documentElement.classList.add("no-scroll");
     document.body.classList.add("no-scroll");
   }
+  // Capture any incoming hash so that cross-page navigation
+  // (e.g. lotteria.html → index.html#studio) lands on the right
+  // section after the loader curtain lifts.
+  const initialHash = window.location.hash;
+  const hasInitialHash = !!(initialHash && initialHash.length > 1);
   // Force the page back to the top in case the browser restored a scroll
-  // position from a previous visit.
+  // position from a previous visit — but only when there's no anchor we
+  // actually want to honor.
   if ("scrollRestoration" in history) history.scrollRestoration = "manual";
-  window.scrollTo(0, 0);
+  if (!hasInitialHash) window.scrollTo(0, 0);
 
   // Belt-and-braces: also swallow any scroll/touch/key input while locked.
   const blockScroll = (e) => {
@@ -45,7 +51,23 @@
       // immediately interactive when the user sees it.
       document.documentElement.classList.remove("no-scroll");
       document.body.classList.remove("no-scroll");
-      window.scrollTo(0, 0);
+      if (hasInitialHash) {
+        // We arrived with a hash (e.g. #studio coming from a subpage):
+        // jump to that section instead of the top, applying the same
+        // per-anchor offset the in-page links use.
+        const target = document.querySelector(initialHash);
+        if (target) {
+          const navH = nav ? nav.getBoundingClientRect().height : 60;
+          const customOffset = ANCHOR_OFFSETS[initialHash];
+          const offset = customOffset != null ? customOffset : (navH + 12);
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top: Math.max(0, top), left: 0, behavior: "auto" });
+        } else {
+          window.scrollTo(0, 0);
+        }
+      } else {
+        window.scrollTo(0, 0);
+      }
     }, 2400);
     setTimeout(() => loader.remove(), 3400);
   });
@@ -234,8 +256,13 @@
     "#studio":   0,   // land slightly above the title so it sits comfortably below the nav
     "#artisti":  0,
     "#galleria": 0,
+    "#recensioni": 0,
     "#faq":      0,
-    "#contatti": 0
+    "#contatti": 0,
+    // Subpage CTAs: drop the landing point lower so the section title
+    // doesn't sit pinned right under the nav.
+    "#iscrizioni": 140,
+    "#partecipa":  140
   };
 
   let anchorScrollFrame = null;

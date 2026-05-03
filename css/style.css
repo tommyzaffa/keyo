@@ -261,7 +261,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .nav-links {
-  display: flex; gap: 32px;
+  display: flex; align-items: center; gap: 32px;
 }
 .nav-links a {
   font-size: 12px;
@@ -1081,7 +1081,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   align-self: center;
   margin: 0 4px;
 }
-.nav-cta {
+/* Use .nav-links a.nav-cta to win specificity over `.nav-links a` */
+.nav-links a.nav-cta {
   font-size: 11px;
   letter-spacing: .22em;
   text-transform: uppercase;
@@ -1092,12 +1093,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border-radius: var(--radius);
   transition: border-color .3s var(--ease), background .3s var(--ease), color .3s var(--ease);
 }
-.nav-cta:hover { border-color: var(--text); background: rgba(255,255,255,.06); opacity: 1; }
-.nav-cta::after { display: none; }
-.nav-cta-accent { background: var(--text); color: var(--bg); border-color: var(--text); }
-.nav-cta-accent:hover { background: transparent; color: var(--text); }
-.nav-cta.active { border-color: var(--text); background: rgba(255,255,255,.08); }
-.nav-cta-accent.active { background: var(--text); color: var(--bg); }
+.nav-links a.nav-cta:hover { border-color: var(--text); background: rgba(255,255,255,.06); color: var(--text); opacity: 1; }
+.nav-links a.nav-cta::after { display: none; }
+.nav-links a.nav-cta-accent { background: var(--text); color: var(--bg); border-color: var(--text); }
+.nav-links a.nav-cta-accent:hover { background: transparent; color: var(--text); }
+.nav-links a.nav-cta.active { border-color: var(--text); background: rgba(255,255,255,.08); color: var(--text); }
+.nav-links a.nav-cta-accent.active { background: var(--text); color: var(--bg); }
 
 @media (max-width: 960px) {
   .nav-sep { display: none; }
