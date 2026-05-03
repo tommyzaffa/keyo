@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#0a0a0a" />
+<title>Accademia Keyo — Locarno CH</title>
+<meta name="description" data-i18n-attr="content" data-i18n="academy.intro" content="Accademia Keyo: corso intensivo di tatuaggio da settembre 2026 a maggio 2027, a Locarno." />
+<link rel="icon" href="img/icon.jpg" type="image/jpeg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="subpage">
+
+<!-- Loader -->
+<div class="loader" id="loader">
+  <div class="loader-meta loader-meta-top">
+    <span>「 tattoo academy 」</span>
+  </div>
+  <div class="loader-inner">
+    <span class="loader-bracket left">「</span>
+    <span class="loader-word">
+      <span class="ll" style="--i:0">k</span><span class="ll" style="--i:1">e</span><span class="ll" style="--i:2">y</span><span class="ll" style="--i:3">o</span>
+    </span>
+    <span class="loader-bracket right">」</span>
+  </div>
+  <div class="loader-line"><span></span></div>
+  <div class="loader-meta loader-meta-bottom">
+    <span class="lm-l">academy</span>
+    <span class="lm-dot">·</span>
+    <span class="lm-r">2026 — 2027</span>
+  </div>
+</div>
+
+<!-- Vertical side decorations -->
+<div class="side-text side-left" aria-hidden="true">
+  <div class="phrase-stack" data-cycle="left">
+    <span class="phrase active" data-i18n="side.l1">artists in residence</span>
+    <span class="phrase" data-i18n="side.l5">ogni linea una storia</span>
+    <span class="phrase" data-i18n="side.l3">da oltre un decennio</span>
+    <span class="phrase" data-i18n="side.l6">il rituale del segno</span>
+    <span class="phrase" data-i18n="side.l4">made in locarno</span>
+  </div>
+</div>
+<div class="side-text side-right" aria-hidden="true">
+  <div class="phrase-stack" data-cycle="right">
+    <span class="phrase active" data-i18n="academy.tag">tattoo academy</span>
+    <span class="phrase" data-i18n="side.r2">via al castello 1</span>
+    <span class="phrase" data-i18n="academy.d.datesV">Settembre 2026 → Maggio 2027</span>
+    <span class="phrase" data-i18n="side.r4">est. 2019</span>
+    <span class="phrase" data-i18n="side.r5">su appuntamento</span>
+  </div>
+</div>
+<div class="side-text side-bottom-left" aria-hidden="true">
+  <div class="phrase-stack" data-cycle="bottom">
+    <span class="phrase active" data-i18n="academy.d.placesV">8 allievi</span>
+    <span class="phrase" data-i18n="side.b4">consulenza gratuita</span>
+    <span class="phrase" data-i18n="academy.d.totalV">≈ 520 ore</span>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="nav scrolled" id="nav">
+  <a href="index.html" class="nav-logo">
+    <span class="logo-main">KEYO</span>
+    <span class="logo-sub">studio</span>
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html#studio" data-i18n="nav.studio">Studio</a>
+    <a href="index.html#artisti" data-i18n="nav.artists">Artisti</a>
+    <a href="index.html#galleria" data-i18n="nav.gallery">Galleria</a>
+    <a href="index.html#recensioni" data-i18n="nav.reviews">Recensioni</a>
+    <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+    <a href="index.html#contatti" data-i18n="nav.contact">Contatti</a>
+    <span class="nav-sep" aria-hidden="true"></span>
+    <a class="nav-cta active" href="accademia.html" data-i18n="nav.academy">Accademia</a>
+    <a class="nav-cta nav-cta-accent" href="lotteria.html" data-i18n="nav.lottery">Lotteria</a>
+  </nav>
+  <div class="nav-right">
+    <div class="lang-switch" id="langSwitch">
+      <button class="lang-current" id="langCurrent" aria-haspopup="listbox" aria-expanded="false">
+        <span id="langLabel">IT</span>
+        <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1 3l4 4 4-4" stroke="currentColor" stroke-width="1" fill="none"/></svg>
+      </button>
+      <ul class="lang-list" role="listbox">
+        <li data-lang="it" role="option">IT — Italiano</li>
+        <li data-lang="en" role="option">EN — English</li>
+        <li data-lang="de" role="option">DE — Deutsch</li>
+        <li data-lang="fr" role="option">FR — Français</li>
+      </ul>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Page hero -->
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('img/IMG_3037-2-scaled.jpg')"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="hero-tag" data-i18n="academy.tag">tattoo academy</div>
+    <h1 class="page-hero-title">
+      <span class="bracket">「</span><span class="hero-word" data-i18n="academy.title">Accademia Keyo</span><span class="bracket">」</span>
+    </h1>
+    <p class="hero-sub" data-i18n="academy.sub">Il mestiere del tatuaggio, insegnato in studio.</p>
+    <div class="hero-meta">
+      <span data-i18n="academy.d.datesV">Settembre 2026 → Maggio 2027</span>
+      <span class="dot">·</span>
+      <span data-i18n="academy.d.placesV">8 allievi</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#iscrizioni" class="btn btn-primary" data-i18n="academy.h.apply">Iscrizioni</a>
+      <a href="index.html" class="btn btn-ghost" data-i18n="footer.backHome">Torna alla home ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- Intro -->
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">01</span>
+    <h2 class="section-title" data-i18n="academy.h.program">Il programma</h2>
+  </div>
+  <div class="page-prose reveal">
+    <p data-i18n="academy.intro">Da settembre 2026 a maggio 2027 lo studio apre le porte a una nuova generazione di tatuatori. Un percorso di formazione intensivo guidato direttamente da Omar e dal team residente, in un contesto reale di lavoro.</p>
+    <p data-i18n="academy.p.program">Otto mesi di lezioni teoriche e pratiche, dalla preparazione del disegno alla macchinetta sulla pelle. Si parte dalle basi — anatomia, igiene, materiali — per arrivare a sessioni dal vivo affiancati dai resident.</p>
+  </div>
+</section>
+
+<!-- Modules -->
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">02</span>
+    <h2 class="section-title" data-i18n="academy.h.modules">Moduli principali</h2>
+  </div>
+  <ol class="modules-list reveal">
+    <li><span class="m-num">01</span><span class="m-text" data-i18n="academy.m1">Storia e cultura del tatuaggio</span></li>
+    <li><span class="m-num">02</span><span class="m-text" data-i18n="academy.m2">Disegno, composizione e stencil</span></li>
+    <li><span class="m-num">03</span><span class="m-text" data-i18n="academy.m3">Igiene, biosicurezza e normative svizzere</span></li>
+    <li><span class="m-num">04</span><span class="m-text" data-i18n="academy.m4">Macchinette, aghi, pigmenti — tecnica di base</span></li>
+    <li><span class="m-num">05</span><span class="m-text" data-i18n="academy.m5">Realismo, microrealismo, line work</span></li>
+    <li><span class="m-num">06</span><span class="m-text" data-i18n="academy.m6">Sessioni dal vivo e gestione del cliente</span></li>
+  </ol>
+</section>
+
+<!-- Details -->
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">03</span>
+    <h2 class="section-title" data-i18n="academy.h.details">Dettagli pratici</h2>
+  </div>
+  <div class="details-grid reveal">
+    <div class="detail-cell">
+      <span class="info-label" data-i18n="academy.d.dates">Date</span>
+      <p data-i18n="academy.d.datesV">Settembre 2026 → Maggio 2027</p>
+    </div>
+    <div class="detail-cell">
+      <span class="info-label" data-i18n="academy.d.hours">Ore settimanali</span>
+      <p data-i18n="academy.d.hoursV">16 ore (giovedì + venerdì)</p>
+    </div>
+    <div class="detail-cell">
+      <span class="info-label" data-i18n="academy.d.total">Ore totali</span>
+      <p data-i18n="academy.d.totalV">≈ 520 ore di formazione</p>
+    </div>
+    <div class="detail-cell">
+      <span class="info-label" data-i18n="academy.d.places">Posti disponibili</span>
+      <p data-i18n="academy.d.placesV">8 allievi (selezione su colloquio)</p>
+    </div>
+    <div class="detail-cell">
+      <span class="info-label" data-i18n="academy.d.price">Investimento</span>
+      <p data-i18n="academy.d.priceV">CHF 9'800 (rateizzabile in 4 tranche)</p>
+    </div>
+    <div class="detail-cell">
+      <span class="info-label" data-i18n="academy.d.cert">Certificazione</span>
+      <p data-i18n="academy.d.certV">Attestato Keyo + portfolio finale</p>
+    </div>
+  </div>
+</section>
+
+<!-- Who -->
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">04</span>
+    <h2 class="section-title" data-i18n="academy.h.who">A chi è rivolto</h2>
+  </div>
+  <div class="page-prose reveal">
+    <p data-i18n="academy.p.who">A chi vuole entrare seriamente nel mondo del tatuaggio. Non servono prerequisiti tecnici, ma una solida base di disegno e una motivazione vera. Selezioniamo gli allievi su colloquio per garantire un gruppo affiatato.</p>
+  </div>
+</section>
+
+<!-- Apply -->
+<section class="section contact-section" id="iscrizioni">
+  <div class="section-head">
+    <span class="section-num">05</span>
+    <h2 class="section-title" data-i18n="academy.h.apply">Iscrizioni</h2>
+    <p class="section-lead" data-i18n="academy.p.apply">I posti sono limitati. Compila il modulo per ricevere il dossier completo e fissare un colloquio conoscitivo.</p>
+  </div>
+
+  <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/xeenernd" method="POST">
+    <input type="hidden" name="_subject" value="Accademia Keyo — nuova candidatura" />
+    <input type="hidden" name="origine" value="accademia" />
+    <div class="field">
+      <label for="ac-name" data-i18n="academy.f.name">Nome e cognome</label>
+      <input type="text" id="ac-name" name="nome" required />
+    </div>
+    <div class="field">
+      <label for="ac-email" data-i18n="academy.f.email">Email</label>
+      <input type="email" id="ac-email" name="email" required />
+    </div>
+    <div class="field">
+      <label for="ac-phone" data-i18n="academy.f.phone">Telefono</label>
+      <input type="tel" id="ac-phone" name="telefono" />
+    </div>
+    <div class="field">
+      <label for="ac-exp" data-i18n="academy.f.exp">Esperienza nel disegno</label>
+      <select id="ac-exp" name="esperienza">
+        <option data-i18n="academy.f.expOpts.none">Nessuna</option>
+        <option data-i18n="academy.f.expOpts.basic">Base / autodidatta</option>
+        <option data-i18n="academy.f.expOpts.school">Scuola d'arte</option>
+        <option data-i18n="academy.f.expOpts.pro">Già professionista</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="ac-msg" data-i18n="academy.f.msg">Raccontaci perché vuoi entrare</label>
+      <textarea id="ac-msg" name="messaggio" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" id="cfSubmit" data-i18n="academy.f.submit">Invia candidatura</button>
+    <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="logo-main">KEYO</span>
+      <span class="logo-sub">tattoo studio · Locarno CH</span>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html#studio" data-i18n="nav.studio">Studio</a>
+      <a href="index.html#artisti" data-i18n="nav.artists">Artisti</a>
+      <a href="index.html#galleria" data-i18n="nav.gallery">Galleria</a>
+      <a href="index.html#recensioni" data-i18n="nav.reviews">Recensioni</a>
+      <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="index.html#contatti" data-i18n="nav.contact">Contatti</a>
+      <a href="accademia.html" data-i18n="nav.academy">Accademia</a>
+      <a href="lotteria.html" data-i18n="nav.lottery">Lotteria</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> Keyo Tattoo Studio</span>
+    <span data-i18n="footer.rights">Tutti i diritti riservati.</span>
+    <span class="footer-credit">
+      <span data-i18n="footer.developedBy">Sviluppato da</span>
+      <a href="https://www.tommyzaffa.com" target="_blank" rel="noopener">Thomas Zaffalon</a>
+    </span>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

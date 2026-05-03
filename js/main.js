@@ -7,8 +7,13 @@
   /* -------- Loader -------- */
   // Lock scroll IMMEDIATELY (before window 'load') so any early wheel/touch
   // input during the intro animation does not move the page off the hero.
-  document.documentElement.classList.add("no-scroll");
-  document.body.classList.add("no-scroll");
+  // Only lock if a loader is actually present in the DOM, otherwise a page
+  // without a loader would stay locked forever.
+  const _hasLoader = !!document.getElementById("loader");
+  if (_hasLoader) {
+    document.documentElement.classList.add("no-scroll");
+    document.body.classList.add("no-scroll");
+  }
   // Force the page back to the top in case the browser restored a scroll
   // position from a previous visit.
   if ("scrollRestoration" in history) history.scrollRestoration = "manual";
@@ -299,9 +304,16 @@
           headers: { Accept: "application/json" }
         });
         if (res.ok) {
-          cfStatus.textContent = msgFor("contact.f.success", "Richiesta inviata. Ti risponderemo a breve.");
+          const redirect = cf.getAttribute("data-redirect");
+          const successKey = redirect ? "lottery.f.success" : "contact.f.success";
+          cfStatus.textContent = msgFor(successKey, "Richiesta inviata. Ti risponderemo a breve.");
           cfStatus.classList.add("show", "ok");
           cf.reset();
+          if (redirect && /^https?:\/\//.test(redirect) && !/REPLACE_WITH/i.test(redirect)) {
+            // Give the user a beat to read the success message before
+            // bouncing them to the secure payment page (Stripe Payment Link).
+            setTimeout(() => { window.location.href = redirect; }, 900);
+          }
         } else {
           cfStatus.textContent = msgFor("contact.f.error", "Si è verificato un errore. Riprova o scrivici su Instagram.");
           cfStatus.classList.add("show", "err");

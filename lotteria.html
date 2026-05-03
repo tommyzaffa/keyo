@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#0a0a0a" />
+<title>Lotteria Keyo — Locarno CH</title>
+<meta name="description" data-i18n-attr="content" data-i18n="lottery.sub" content="Lotteria Keyo: 100 CHF, voucher tatuaggio da 200 CHF e in palio una manica gratis." />
+<link rel="icon" href="img/icon.jpg" type="image/jpeg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="subpage">
+
+<!-- Loader -->
+<div class="loader" id="loader">
+  <div class="loader-meta loader-meta-top">
+    <span>「 studio lottery 」</span>
+  </div>
+  <div class="loader-inner">
+    <span class="loader-bracket left">「</span>
+    <span class="loader-word">
+      <span class="ll" style="--i:0">k</span><span class="ll" style="--i:1">e</span><span class="ll" style="--i:2">y</span><span class="ll" style="--i:3">o</span>
+    </span>
+    <span class="loader-bracket right">」</span>
+  </div>
+  <div class="loader-line"><span></span></div>
+  <div class="loader-meta loader-meta-bottom">
+    <span class="lm-l">100 chf</span>
+    <span class="lm-dot">·</span>
+    <span class="lm-r">free sleeve in palio</span>
+  </div>
+</div>
+
+<!-- Vertical side decorations -->
+<div class="side-text side-left" aria-hidden="true">
+  <div class="phrase-stack" data-cycle="left">
+    <span class="phrase active" data-i18n="lottery.tag">studio lottery</span>
+    <span class="phrase" data-i18n="side.l5">ogni linea una storia</span>
+    <span class="phrase" data-i18n="side.l4">made in locarno</span>
+    <span class="phrase" data-i18n="side.l3">da oltre un decennio</span>
+    <span class="phrase" data-i18n="side.l6">il rituale del segno</span>
+  </div>
+</div>
+<div class="side-text side-right" aria-hidden="true">
+  <div class="phrase-stack" data-cycle="right">
+    <span class="phrase active" data-i18n="lottery.priceVal">CHF 100</span>
+    <span class="phrase" data-i18n="lottery.priceTag">Ticket lotteria</span>
+    <span class="phrase" data-i18n="side.r2">via al castello 1</span>
+    <span class="phrase" data-i18n="side.r4">est. 2019</span>
+    <span class="phrase" data-i18n="side.r5">su appuntamento</span>
+  </div>
+</div>
+<div class="side-text side-bottom-left" aria-hidden="true">
+  <div class="phrase-stack" data-cycle="bottom">
+    <span class="phrase active" data-i18n="lottery.h2">voucher 200 chf</span>
+    <span class="phrase" data-i18n="lottery.h3">free sleeve in palio</span>
+    <span class="phrase" data-i18n="side.b4">consulenza gratuita</span>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="nav scrolled" id="nav">
+  <a href="index.html" class="nav-logo">
+    <span class="logo-main">KEYO</span>
+    <span class="logo-sub">studio</span>
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html#studio" data-i18n="nav.studio">Studio</a>
+    <a href="index.html#artisti" data-i18n="nav.artists">Artisti</a>
+    <a href="index.html#galleria" data-i18n="nav.gallery">Galleria</a>
+    <a href="index.html#recensioni" data-i18n="nav.reviews">Recensioni</a>
+    <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+    <a href="index.html#contatti" data-i18n="nav.contact">Contatti</a>
+    <span class="nav-sep" aria-hidden="true"></span>
+    <a class="nav-cta" href="accademia.html" data-i18n="nav.academy">Accademia</a>
+    <a class="nav-cta nav-cta-accent active" href="lotteria.html" data-i18n="nav.lottery">Lotteria</a>
+  </nav>
+  <div class="nav-right">
+    <div class="lang-switch" id="langSwitch">
+      <button class="lang-current" id="langCurrent" aria-haspopup="listbox" aria-expanded="false">
+        <span id="langLabel">IT</span>
+        <svg width="10" height="10" viewBox="0 0 10 10"><path d="M1 3l4 4 4-4" stroke="currentColor" stroke-width="1" fill="none"/></svg>
+      </button>
+      <ul class="lang-list" role="listbox">
+        <li data-lang="it" role="option">IT — Italiano</li>
+        <li data-lang="en" role="option">EN — English</li>
+        <li data-lang="de" role="option">DE — Deutsch</li>
+        <li data-lang="fr" role="option">FR — Français</li>
+      </ul>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Page hero -->
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('img/IMG_3036-2-scaled.jpg')"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="hero-tag" data-i18n="lottery.tag">studio lottery</div>
+    <h1 class="page-hero-title">
+      <span class="bracket">「</span><span class="hero-word" data-i18n="lottery.title">Lotteria Keyo</span><span class="bracket">」</span>
+    </h1>
+    <p class="hero-sub" data-i18n="lottery.sub">Un buono da 200, una manica gratis in palio.</p>
+    <div class="hero-meta">
+      <span data-i18n="lottery.priceVal">CHF 100</span>
+      <span class="dot">·</span>
+      <span data-i18n="lottery.h2">Voucher 200 CHF</span>
+      <span class="dot">·</span>
+      <span data-i18n="lottery.h3">Estrazione manica gratis</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#partecipa" class="btn btn-primary" data-i18n="lottery.payTitle">Partecipa ora</a>
+      <a href="index.html" class="btn btn-ghost" data-i18n="footer.backHome">Torna alla home ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">01</span>
+    <h2 class="section-title" data-i18n="lottery.howTitle">Come funziona</h2>
+  </div>
+  <div class="specs-grid">
+    <div class="spec reveal">
+      <span class="spec-num">1</span>
+      <h3 data-i18n="lottery.h1">Spendi 100 CHF</h3>
+      <p data-i18n="lottery.p1">Acquisti il ticket e contribuisci al montepremi della lotteria.</p>
+    </div>
+    <div class="spec reveal">
+      <span class="spec-num">2</span>
+      <h3 data-i18n="lottery.h2">Ricevi un buono da 200 CHF</h3>
+      <p data-i18n="lottery.p2">Ti arriva via email un voucher spendibile in studio per qualsiasi tatuaggio.</p>
+    </div>
+    <div class="spec reveal">
+      <span class="spec-num">3</span>
+      <h3 data-i18n="lottery.h3">Partecipi all'estrazione</h3>
+      <p data-i18n="lottery.p3">Ogni ticket ti dà un codice univoco per la lotteria: in palio una manica completa, gratuita.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Rules -->
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">02</span>
+    <h2 class="section-title" data-i18n="lottery.rulesTitle">Regolamento</h2>
+  </div>
+  <ul class="rules-list reveal">
+    <li><span class="r-num">·</span><span data-i18n="lottery.r1">Il buono da 200 CHF è nominale, non cedibile, valido 12 mesi dall'emissione.</span></li>
+    <li><span class="r-num">·</span><span data-i18n="lottery.r2">Il voucher è cumulabile fino a un solo pezzo per persona; per tatuaggi di valore superiore si paga la differenza.</span></li>
+    <li><span class="r-num">·</span><span data-i18n="lottery.r3">L'estrazione avviene in studio alla chiusura della raccolta ticket; il vincitore viene contattato via email entro 7 giorni.</span></li>
+    <li><span class="r-num">·</span><span data-i18n="lottery.r4">Il premio (manica completa) è realizzato da Omar Keyo, soggetto disegnato in collaborazione con il vincitore.</span></li>
+    <li><span class="r-num">·</span><span data-i18n="lottery.r5">Devi avere almeno 18 anni per partecipare.</span></li>
+  </ul>
+</section>
+
+<!-- Participate / Pay -->
+<section class="section contact-section" id="partecipa">
+  <div class="section-head">
+    <span class="section-num">03</span>
+    <h2 class="section-title" data-i18n="lottery.payTitle">Partecipa ora</h2>
+    <p class="section-lead" data-i18n="lottery.payIntro">Compila i tuoi dati e completa il pagamento sicuro. Riceverai voucher e codice lotteria via email.</p>
+  </div>
+
+  <div class="lottery-grid">
+    <aside class="lottery-price reveal">
+      <span class="info-label" data-i18n="lottery.priceTag">Ticket lotteria</span>
+      <span class="price-big" data-i18n="lottery.priceVal">CHF 100</span>
+      <ul class="price-bullets">
+        <li>
+          <span class="b-mark">+</span>
+          <span data-i18n="lottery.h2">Voucher 200 CHF</span>
+        </li>
+        <li>
+          <span class="b-mark">+</span>
+          <span data-i18n="lottery.h3">Estrazione manica gratis</span>
+        </li>
+      </ul>
+      <p class="price-note" data-i18n="lottery.r5">Devi avere almeno 18 anni per partecipare.</p>
+    </aside>
+
+    <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/xeenernd" method="POST" data-redirect="https://buy.stripe.com/REPLACE_WITH_REAL_PAYMENT_LINK">
+      <input type="hidden" name="_subject" value="Lotteria Keyo — nuovo partecipante" />
+      <input type="hidden" name="origine" value="lotteria" />
+      <input type="hidden" name="ticket" value="CHF 100 — voucher 200 + estrazione manica gratis" />
+      <div class="field">
+        <label for="lt-name" data-i18n="lottery.f.name">Nome e cognome</label>
+        <input type="text" id="lt-name" name="nome" required />
+      </div>
+      <div class="field">
+        <label for="lt-email" data-i18n="lottery.f.email">Email</label>
+        <input type="email" id="lt-email" name="email" required />
+      </div>
+      <div class="field">
+        <label for="lt-phone" data-i18n="lottery.f.phone">Telefono</label>
+        <input type="tel" id="lt-phone" name="telefono" required />
+      </div>
+      <div class="field">
+        <label for="lt-notes" data-i18n="lottery.f.notes">Note (facoltative)</label>
+        <textarea id="lt-notes" name="note" rows="3"></textarea>
+      </div>
+      <label class="field-check">
+        <input type="checkbox" id="lt-consent" name="consenso" required />
+        <span data-i18n="lottery.f.consent">Confermo di avere almeno 18 anni e di accettare il regolamento.</span>
+      </label>
+      <button type="submit" class="btn btn-primary" id="cfSubmit" data-i18n="lottery.f.submit">Procedi al pagamento — 100 CHF</button>
+      <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="logo-main">KEYO</span>
+      <span class="logo-sub">tattoo studio · Locarno CH</span>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html#studio" data-i18n="nav.studio">Studio</a>
+      <a href="index.html#artisti" data-i18n="nav.artists">Artisti</a>
+      <a href="index.html#galleria" data-i18n="nav.gallery">Galleria</a>
+      <a href="index.html#recensioni" data-i18n="nav.reviews">Recensioni</a>
+      <a href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="index.html#contatti" data-i18n="nav.contact">Contatti</a>
+      <a href="accademia.html" data-i18n="nav.academy">Accademia</a>
+      <a href="lotteria.html" data-i18n="nav.lottery">Lotteria</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> Keyo Tattoo Studio</span>
+    <span data-i18n="footer.rights">Tutti i diritti riservati.</span>
+    <span class="footer-credit">
+      <span data-i18n="footer.developedBy">Sviluppato da</span>
+      <a href="https://www.tommyzaffa.com" target="_blank" rel="noopener">Thomas Zaffalon</a>
+    </span>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
