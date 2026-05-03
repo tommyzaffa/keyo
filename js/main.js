@@ -261,8 +261,8 @@
     "#contatti": 0,
     // Subpage CTAs: drop the landing point lower so the section title
     // doesn't sit pinned right under the nav.
-    "#iscrizioni": 140,
-    "#partecipa":  140
+    "#iscrizioni": 0,
+    "#partecipa":  0
   };
 
   let anchorScrollFrame = null;
